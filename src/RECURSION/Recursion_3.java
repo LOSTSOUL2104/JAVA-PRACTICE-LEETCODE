@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Recursion_3 {
     public static void main(String[] args) {
 //        triangle_1(4, 0);
-        int[] arr = {1,3,2,4,6,5};
-        bubble_sort_recursive(arr, arr.length - 1, 0);
+        int[] arr = {1,3,2,4,100,92,928,6,5};
+//        bubble_sort_recursive(arr, arr.length - 1, 0);
+        selection_sort(arr,arr.length,0,0);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -43,4 +44,29 @@ public class Recursion_3 {
             bubble_sort_recursive(arr,start-1,0);
         }
     }
+    static void selection_sort(int[] arr, int r,int c, int max)
+    {
+        if (r ==0)
+        {
+            return;
+        }
+        if (c<r)
+        {
+            if (arr[c] > arr[max])
+            {
+                selection_sort(arr,r,c+1,c);
+            }
+            else {
+                selection_sort(arr, r, c + 1, max);
+            }
+        }
+        else
+        {
+            int temp = arr[max];
+            arr[max ] = arr[r-1];
+            arr[r-1]  = temp;
+            selection_sort(arr,r-1,0,0);
+        }
+    }
+
 }

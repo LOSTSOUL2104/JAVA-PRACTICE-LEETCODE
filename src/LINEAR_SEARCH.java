@@ -10,7 +10,7 @@ public class LINEAR_SEARCH
 //            System.out.println(ans);
                   //SEARCH IN STRING
             String name = "priyansh";
-            char target = 'p';
+            char target = 'h';
             System.out.println(search(name,target));
 
             System.out.println(Arrays.toString(name.toCharArray()));

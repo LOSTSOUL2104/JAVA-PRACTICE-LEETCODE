@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class PASCAL_TRIANGLE {
+public class PASCAL_TRIANGLE {
+    public static void main(String[] args) {
+
+    }
 }
