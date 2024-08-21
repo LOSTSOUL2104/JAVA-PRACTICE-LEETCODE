@@ -1,56 +1,56 @@
 package OOPS;
-
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class OOPS_1 {
     public static void main(String[] args) {
-        Student[] students = new Student[5];
+        Box myBox  = new Box();
+        myBox.DisplayMeasurements();
+        myBox.DisplayArea();
+        myBox.DisplayPerimeter();
 
-        Student priyansh = new Student ();
-        Student ram = new Student ();
+        System.out.println("Another one");
 
-//        priyansh.rno = 21;
-//        priyansh.name = "Priyansh Arora";
-//        priyansh.marks = 99.9f;
-//        priyansh.changeName ("raman");
-//        priyansh.greeting ();
+        Scanner in = new Scanner (System.in);
+        double length = in.nextDouble ();
+        double breadth = in.nextDouble ();
 
-        System.out.println (priyansh.rno);
-        System.out.println (priyansh.name );
-        System.out.println (priyansh.marks);
-
-        Student random = new Student (priyansh);
-        System.out.println (random.name);
+        Box myBox2 = new Box(length, breadth);
+        myBox2.DisplayMeasurements();
+        myBox2.DisplayArea();
+        myBox2.DisplayPerimeter();
     }
 }
-class Student {
-    int rno;
-    String name;
-    float marks = 90;
-    void greeting()
-    {
-        System.out.println ("hello my name is :  "+ name);
-    }
-    void changeName(String newName)
-    {
-        name = newName;
+
+class Box {
+    double length;
+    double breadth;
+    double area;
+    double perimeter;
+
+    Box() {
+        this.length = 21;
+        this.breadth = 22;
+        this.area = length * breadth;
+        this.perimeter = 2 * (length + breadth);
     }
 
-    Student(Student other)
-    {
-        this.name= other.name;
-        this.rno = other.rno;
-        this.marks = other.marks;
+    Box(double length, double breadth) {
+        this.length = length;
+        this.breadth = breadth;
+        this.area = length * breadth;
+        this.perimeter = 2 * (length + breadth);
     }
-    Student(){
-        this.rno = 21;
-        this.name = "priyansh";
-        this.marks = 92.5f;
+
+    void DisplayMeasurements() {
+        System.out.println("length: " + length);
+        System.out.println("breadth: " + breadth);
     }
-    Student(int rno,String name , float marks)
-    {
-        this.rno = rno;
-        this.name  = name;
-        this.marks = marks;
+
+    void DisplayArea() {
+        System.out.println("area: " + area);
+    }
+
+    void DisplayPerimeter() {
+        System.out.println("perimeter: " + perimeter);
     }
 }

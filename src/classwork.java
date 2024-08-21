@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class classwork {
-    public static void main(String[] args) {
+    public static void main(String ... args) {
 //    garbage_array();
 //demo_arr();
 //        int[] arr = {1,2,3,4,5,6,7};
@@ -12,7 +12,7 @@ public class classwork {
 //        for (int i = 0; i < n; i++)
 //            System.out.print(arr[i] + " ");
 //        System.out.println();
-        f_to_c (86);
+//        f_to_c (86);
     }
 
     private static void garbage_array() {
