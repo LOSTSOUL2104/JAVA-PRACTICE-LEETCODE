@@ -2,11 +2,12 @@ import java.util.Scanner;
 
 public class PRACTICE_1 {
     //    Gross salary of an employee
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner in = new Scanner (System.in);
 //        int number = in.nextInt ();
 //        increment_by_one (number);
-//        System.out.println (Kaprekar (45));
+
 
         }
 //        int bs = in.nextInt ();
@@ -71,18 +72,16 @@ public static boolean Prime_1toN(int n){
     return true;
 }
 
-
-
-
 public void main() {
-    int N = 100;
-    //check for every number from 1 to N
-    for(int i=1; i<=N; i++){
-        //check if current number is prime
-        if(Prime_1toN (i)) {
-            System.out.print(i + " ");
-        }
-    }
+//    int N = 100;
+//    //check for every number from 1 to N
+//    for(int i=1; i<=N; i++){
+//        //check if current number is prime
+//        if(Prime_1toN (i)) {
+//            System.out.print(i + " ");
+//        }
+//    }
+//    System.out.println (Kaprekar (45));
 }
 
 

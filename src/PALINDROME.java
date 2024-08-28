@@ -1,7 +1,8 @@
 public class PALINDROME {
     public static void main(String[] args) {
-            String str  = "ArOrA";
-        System.out.println(ispalindrome(str));
+//            String str  = "ArOrA";
+//        System.out.println(ispalindrome(str));
+        System.out.println (reverse (1234));
     }
     static boolean ispalindrome(String str)
     {
@@ -20,4 +21,17 @@ public class PALINDROME {
         }
         return true;
     }
+    static int reverse(int n)
+    {
+        int rev = 0;
+        int rem;
+        while(n>0)
+        {
+            rem = n%10;
+            rev = (rev*10) + rem;
+            n /= 10;
+        }
+        return rev;
+    }
+
 }
