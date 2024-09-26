@@ -2,17 +2,16 @@ import java.util.Scanner;
 
 public class strings_3 {
         public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            String s = sc.nextLine();
 
-            StringBuilder sb = new StringBuilder();
-
-            sb.append(s.charAt(0));
-            for(int i =1; i<s.length();i++){
-                sb.append(s.charAt(i)-s.charAt(i-1));
-                sb.append(s.charAt(i));
+            StringBuilder str = new StringBuilder ("hello");
+            str.append (" world");
+            System.out.println (str);
+//            str.reverse();
+            str.setCharAt (0,'m');
+            System.out.println (str);
+    str.insert(2,'y');
+            System.out.println (str);
+            str.deleteCharAt (2);
+            System.out.println (str);
             }
-            System.out.println(sb.toString());
         }
-    }
-
