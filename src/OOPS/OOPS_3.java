@@ -12,11 +12,13 @@ class VEHICLE {
     public int speed;
     public int wheel;
 
-    public VEHICLE(String fuel, int speed ,int wheel) {
-        this.fuel = fuel; this.speed = speed;this.wheel = wheel;
+    public VEHICLE(String fuel, int speed, int wheel) {
+        this.fuel = fuel; this.speed = speed; this.wheel = wheel;
     }
+
     public String toString() {
-        return ("Number of wheels : " + wheel + " " + "Speed of bicycle is  : " + speed + " " + "The fuel type is : " + fuel);
+        return ("Number of wheels : " + wheel + " " + "Speed of bicycle is  : " +
+                speed + " " + "The fuel type is : " + fuel);
     }
 }
 
@@ -25,7 +27,7 @@ class MountainBike extends VEHICLE {
     public int seatHeight;
 
     public MountainBike(String fuel, int speed, int wheel) {
-        super (fuel, speed,wheel);
+        super (fuel, speed, wheel);
     }
 
 //    public void setHeight(int newValue) {

@@ -13,13 +13,30 @@ public class MAZE_1 {
                 {true, true, true}
         };pathRestrictions("",board,0,0);   }
 
-    static int count(int r, int c) {
-        if (r == 1 || c == 1) {
-            return 1;
+    static void printpath(String p,int r,int c)
+    {
+        if (r ==1 && c == 1)
+        {
+            return;
         }
-        int left = count(r - 1, c);
-        int right = count(r, c - 1);
-        return left + right;
+        if (r>1)
+        {
+            path (p + "D",r-1,c);
+        }
+        if (c>1)
+        {
+            path (p + "R",r,c-1);
+        }
+    }
+    static int count(int r,int c)
+    {
+        if (r==1 || c== 1)
+        {
+           return 1;
+        }
+        int left =count (r-1,c);
+        int right = count (r,c-1);
+        return left+right;
     }
 
     static void path(String p, int r, int c) {
