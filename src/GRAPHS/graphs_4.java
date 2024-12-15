@@ -1,5 +1,5 @@
 package GRAPHS;
-
+// Function to detect cycle in a directed graph.
 import java.util.*;
 
 
@@ -49,7 +49,6 @@ class graphs_4 {
         return false;
     }
 
-    // Function to detect cycle in a directed graph.
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
         int vis[] = new int[V];
         int pathVis[] = new int[V];

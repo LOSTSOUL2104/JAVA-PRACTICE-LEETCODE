@@ -1,4 +1,7 @@
 package GRAPHS;
+import java.lang.reflect.Array;
+
+//UNDIRECTED
 import java.util.*;
 public class graphs_5 {
     public static void main(String[] args) {
@@ -19,6 +22,14 @@ public class graphs_5 {
         {
             System.out.println ("no cycle");
         }
+        int src = 0;
+        int dest = 4;
+        int minEdges = g1.minEdge(src, dest);
+        if (minEdges != -1) {
+            System.out.println(minEdges);
+        } else {
+            System.out.println("No path exists ");
+        }
     }
 }
 class Graph
@@ -33,7 +44,6 @@ class Graph
         for (int i = 0; i <v ; i++) {
             adj[i] = new LinkedList<> ();
         }
-
     }
     void addEdge(int v, int w)
     {
@@ -59,6 +69,34 @@ class Graph
         }
         return false;
     }
+    int minEdge(int src, int dest) {
+        boolean[] vis = new boolean[V];
+        vis[src] = true;
+        int[] dist = new int[V];
+        Arrays.fill(dist, -1);
+        Queue<Integer> q = new LinkedList<>();
+        q.add(src);
+        dist[src] = 0;
+
+        while (!q.isEmpty()) {
+            int temp = q.poll();
+
+            for (int neighbor : adj[temp]) {
+                if (!vis[neighbor]) {
+                    vis[neighbor] = true;
+                    dist[neighbor] = dist[temp] + 1;
+
+                    if (neighbor == dest) {
+                        return dist[neighbor];
+                    }
+
+                    q.add(neighbor);
+                }
+            }
+        }
+        return -1;
+    }
+
     Boolean detectCycle()
     {
         Boolean[]visited = new Boolean[V];
